@@ -15,7 +15,16 @@ html, body {
 #header {
     width: 100%;
     grid-row: 1 / 2;
-    border: 1px solid black;
+    background-color: rgb(41, 41, 41);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header-text {
+    font-size: 3em;
+    font-weight: bold;
+    color: white;
 }
 
 #content-body {
@@ -27,5 +36,14 @@ html, body {
 #footer {
     width: 100%;
     grid-row: 3 / 4;
-    border: 1px solid black;
+    background-color: rgb(41, 41, 41);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer-text {
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
 }
