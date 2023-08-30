@@ -30,7 +30,46 @@ html, body {
 #content-body {
     width: 100%;
     grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+}
+
+#sidebar {
+    height: 100%;
+    grid-column: 1 / 2;
+    background-color: rgb(124, 124, 124);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#add-btn {
+    width: 5em;
+    height: 5em;
+    background-color: rgb(138, 156, 172);
+    border: 2px solid rgb(70, 69, 69);
+    border-radius: 1em;
+    font-weight: bold;
+}
+
+#add-btn:hover {
+    border: 2px solid rgb(211, 210, 210);
+}
+
+#book-cards {
+    height: 100%;
+    grid-column: 2 / 4;
     border: 1px solid black;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 250px));
+}
+
+.card {
+    height: 200px;
+    border: 1px solid black;
+    padding: 1em;
+    margin: 1em;
+    border-radius: 1em;
 }
 
 #footer {
