@@ -15,11 +15,14 @@ function addBookToLibrary() {
 
 const myLibrary = [];
 
-const addBtn = document.getElementById("add-btn");
+const addBtn = document.getElementById("add-btn")
 const contentContainer = document.getElementById("content-body");
+const sidebarContainer = document.getElementById("sidebar");
+let form = document.querySelector("form");
 
 addBtn.addEventListener("click", () => {
     console.log("add button clicked");
     addBtn.remove();
     contentContainer.style.gridTemplateColumns = "2fr 4fr 1fr";
+    form.style.display = "block";
 });
