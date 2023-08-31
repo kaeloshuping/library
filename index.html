@@ -14,7 +14,25 @@
         </div>
         <div id="content-body">
             <div id="sidebar">
-                <button id="add-btn">+</button>
+                <form action="" method="post" id="inputForm">
+                    <p id="form-heading">Add Details of Book</p>
+                    <ul>
+                        <li>
+                            <label for="book-title">Book Title*</label>
+                            <input type="text" id="book-title" required>
+                        </li>
+                        <li>
+                            <label for="book-author">Book Author*</label>
+                            <input type="text" id="book-author" required>
+                        </li>
+                        <li>
+                            <label for="page-count">Number of pages in book*</label>
+                            <input type="text" id="page-count" required>
+                        </li>
+                    </ul>
+                    <button type="submit" id="submit-btn">SUBMIT BOOK</button>
+                </form>
+                <button id="add-btn"><span>+</span></button>
             </div>
             <div id="book-cards">
                 <div class="card"></div>
