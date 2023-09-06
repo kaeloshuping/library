@@ -20,6 +20,18 @@ function addBookToLibrary() {
 function createBookCard(title, author, pageCount) {
     let card = document.createElement("div")
     card.className = "card";
+    let titleText = document.createElement("div");
+    titleText.innerHTML = "Title: " + title;
+    titleText.className = "card-text";
+    card.appendChild(titleText);
+    let authorText = document.createElement("div");
+    authorText.innerHTML = "Author: " + author;
+    authorText.className = "card-text";
+    card.appendChild(authorText);
+    let pageCountText = document.createElement("div");
+    pageCountText.innerHTML = "Number of Pages: " + pageCount;
+    pageCountText.className = "card-text";
+    card.appendChild(pageCountText);
     cardContainer.appendChild(card);
 }
 
