@@ -79,7 +79,7 @@ textarea {
     width: 100%;
     grid-row: 2 / 3;
     display: grid;
-    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-columns: 1fr 5fr;
 }
 
 #sidebar {
@@ -121,33 +121,42 @@ form {
 } 
 
 #add-btn {
-    width: 5em;
-    height: 5em;
+    width: 3em;
+    height: 3em;
     font-weight: bold;
 }
 
-#add-btn > span {
+#add-btn {
     font-size: 2.5em;
     font-weight: bold;
 }
 
 #book-cards {
     height: 100%;
+    width: 100%;
     grid-column: 2 / 4;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 250px));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    overflow: scroll;
 }
 
 .card {
+    max-width: 250px;
     height: 200px;
     border: 1px solid black;
     padding: 1em;
-    margin: 1em;
+    margin: 0.5em;
+    gap: 15px;
     border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 #footer {
     width: 100%;
+    height: 100px;
     grid-row: 3 / 4;
     background-color: rgb(41, 41, 41);
     display: flex;
