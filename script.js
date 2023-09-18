@@ -11,10 +11,14 @@ function Book(title, author, pageCount) {
 function addBookToLibrary() {
     let title = bookTitle.value;
     let author = bookAuthor.value;
-    let pageCount = parseInt(numberOfPages.value);
-    const newBook = new Book(title, author, pageCount);
-    createBookCard(title, author, pageCount);
-    myLibrary.push(newBook.info());
+    let pageCount = numberOfPages.value;
+    if (title === "" || author === "" || pageCount === "") {
+        alert("Please fill out required fields");
+    } else {
+        const newBook = new Book(title, author, pageCount);
+        createBookCard(title, author, pageCount);
+        myLibrary.push(newBook.info());
+    };
 };
 
 function createBookCard(title, author, pageCount) {
